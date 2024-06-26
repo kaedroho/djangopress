@@ -15,6 +15,8 @@ import ImageRoundedIcon from "@mui/icons-material/ImageRounded";
 import ColorSchemeToggle from "./ColorSchemeToggle";
 import { closeSidebar } from "../utils";
 import { NavigationContext } from "@django-render/core";
+import { Search } from "@mui/icons-material";
+import Input from "@mui/joy/Input";
 
 export default function Sidebar() {
   const { navigate } = React.useContext(NavigationContext);
@@ -95,6 +97,12 @@ export default function Sidebar() {
           },
         }}
       >
+        <Input sx={{
+          display: {
+            xs: "none",
+            md: "flex",
+          }
+        }} startDecorator={<Search />} placeholder="Search" />
         <List
           size="sm"
           sx={{

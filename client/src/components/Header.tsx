@@ -4,6 +4,8 @@ import IconButton from "@mui/joy/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 
 import { toggleSidebar } from "../utils";
+import { Input } from "@mui/joy";
+import { Search } from "@mui/icons-material";
 
 export default function Header() {
   return (
@@ -42,6 +44,7 @@ export default function Header() {
       >
         <MenuIcon />
       </IconButton>
+      <Input startDecorator={<Search />} placeholder="Search" />
     </Sheet>
   );
 }
